@@ -7,7 +7,7 @@
 body {
     background-color: #686256;
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     margin-top: 1rem;
 }
 
