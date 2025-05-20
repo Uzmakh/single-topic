@@ -12,13 +12,14 @@ body {
 }
 
 .msg-container {
+    margin-top: 15rem;
     text-align: center;
-    margin-bottom: 1.5rem;
+    height: 60vh;
 }
 
 #msg {
     color: #c1502e;
-    font-size: 8vmin;
+    font-size: 12vmin;
 }
 
 .hide {
