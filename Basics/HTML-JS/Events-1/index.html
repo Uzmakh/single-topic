@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2 Assignments of addEventListener</title>
+  </head>
+  <body>
+    <!-- CLASS-50 -->
+    <!-- Assignment#01 on Light & Dark Theme -->
+    <!-- with two buttons -->
+    <!-- <button id="dark">Dark</button>
+    <button id="light">Light</button> -->
+
+    <!-- with single button -->
+    <!-- <button>DARK</button> -->
+
+    <!-- Assignment#02 Interchanging smileys -->
+    <img src="sad.png" alt="sad smiley" id="image" width="10%" />
+
+    <script>
+      // Assignment-01 Light to Dark Mode
+      // with two buttons
+      // let darkBtn = document.querySelector("#dark");
+      // let lightBtn = document.querySelector("#light");
+      // let body = document.querySelector("body");
+
+      // darkBtn.addEventListener("click", changeDark);
+      // lightBtn.addEventListener("click", changeLight);
+
+      // function changeDark() {
+      //     body.style.background = "black";
+      // }
+      // function changeLight() {
+      //     body.style.background = "white";
+      // }
+
+      // with a single button
+
+      // let toggleBtn = document.querySelector("button");
+      // let body = document.querySelector("body");
+      // let color = "dark";
+
+      // let changeTheme = () => {
+      //     if (color === "dark") {
+      //         body.style.background = "white";
+      //         color = "light";
+      //         toggleBtn.innerText = "Dark";
+      //     } else {
+      //         body.style.background = "black";
+      //         color = "dark";
+      //         toggleBtn.innerText = "light";
+      //     }
+      // };
+      // toggleBtn.addEventListener("click", changeTheme);
+
+      // Assignment#02 Interchanging smileys
+      let image = document.querySelector("#image");
+
+      image.addEventListener("mouseover", () => {
+        image.src = "smile.png";
+      });
+      image.addEventListener("mouseout", () => {
+        image.src = "sad.png";
+      });
+    </script>
+  </body>
+</html>

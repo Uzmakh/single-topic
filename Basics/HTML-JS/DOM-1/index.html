@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM-Inserting a new Element</title>
+  </head>
+  <body>
+    <h2>CLASS-43</h2>
+    <div>Inserting/creating new elements</div>
+
+    <h2>CLASS-44</h2>
+    <h4>appendChild()</h4>
+
+    <h2>CLASS-45</h2>
+    <h4>node.classList();</h4>
+
+    <script>
+      // CLASS-43
+      // Inserting/creating new elements
+      // There are 3 steps for inserting a new node/element in a webpage through JS
+      // 1-Create Element
+      // 2-assigning it text to display (through innerText, innerHTML or textContent)
+      // 3-insert the created element at specific point
+
+      // 1-let variable=document.createElement("element/element-tag");
+      // 2- variable.innerText="string";
+      // 3-Inserting that element at some specific point through any of these 4 ways:
+      //   node.append(element-tag);
+      //   node.prepend(element-tag);
+      //   node.before(element-tag);
+      //   node.after(element-tag);
+
+      //   Example:
+      // Inserting at the end of div
+      //   let heading = document.createElement("h1");
+      //   heading.innerText = "Lahore, Pakistan";
+      //   document.querySelector("div").append(heading);
+
+      // Inserting at the start of the div
+      //   let infoText = document.createElement("p");
+      //   infoText.innerText =
+      //     "We are learning web development through a powerful resource.";
+      //   document.querySelector("div").prepend(infoText);
+
+      // Inserting before the div
+      //   let button = document.createElement("button");
+      //   button.innerText = "Click me!";
+      //   document.querySelector("div").before(button);
+
+      // Inserting after the div
+      //   let newPara = document.createElement("p");
+      //   newPara.innerText = "This is new paragraph";
+      //   document.querySelector("div").after(newPara);
+
+      //   to remove new created element
+      //   newPara.remove();
+      //   button.remove();
+      //   infoText.remove();
+
+      //   CLASS-44
+      // appendChild()
+      //   to insert children in any parent-node/element
+      // inserting paragraph
+      let newPara = document.createElement("p");
+      newPara.textContent = "This text is assigned dynamically.";
+      let body = document.querySelector("body");
+
+      body.appendChild(newPara);
+
+      // inserting span
+      let span = document.createElement("span");
+      span.innerText = "Enter your name:";
+
+      body.appendChild(span);
+
+      // inserting input
+      let text = document.createElement("input");
+      text.setAttribute("placeholder", "enter your name.");
+      text.setAttribute("type", "checkbox");
+      //   text.setAttribute("type", "radio");
+      body.appendChild(text);
+
+      //   removeChild(); from parent-node
+      body.removeChild(newPara);
+      body.removeChild(span);
+      body.removeChild(text);
+
+      //   CLASS-45
+      // classList();
+      // node.classList();
+      //   node.classList.add("newClass");
+      //   node.classList.remove("newClass");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+body{
+    background: grey;
+    height: 50vh;
+    width: 50vw;
+}
+div{
+    background: orange;
+}
+h1{
+    color: red;
+}
+h3{
+    color: green;
+}
+button{
+    visibility: hidden;
+}

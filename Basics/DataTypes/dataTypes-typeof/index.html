@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataTypes-typeof</title>
+  </head>
+  <body>
+    <h2>CLASS-05</h2>
+    <h1>Data Types</h1>
+    <script>
+      // Data types- Primitives
+      let myName = "Shahid Naeem"; //string
+      let salary = 40000; //number
+      let isDeveloper = true; //boolean
+      let religion; //undefined
+      let isMarried = null; //null
+
+      let symbol = Symbol("something string type"); //symbol
+      let largeNumber = BigInt(90765987609342165); //bigInt
+
+      console.log("My name is :", myName);
+      console.log("The salary amount is :", salary);
+      console.log("Am I a developer :", isDeveloper);
+      console.log("Religion :", religion);
+      console.log("Marital Status :", isMarried);
+      console.log(symbol);
+      console.log(largeNumber);
+
+      console.log("Variable Type:", typeof myName);
+      console.log("Variable Type:", typeof salary);
+      console.log("Variable Type:", typeof isDeveloper);
+      console.log("Variable Type:", typeof religion);
+      console.log("Variable Type:", typeof isMarried);
+
+      console.log("Variable Type:", typeof symbol);
+      console.log("Variable Type: ", typeof largeNumber);
+
+      // Data types- Non-Primitives(Reference datatypes)
+      /*
+       * Objects-Collection of data(about a specific object) in various datatypes
+       Combination of different datatypes in key-value pairs
+       */
+      //  Example:
+      let person = {
+        firstName: "Shahid",
+        lastName: "Naeem",
+        age: 45,
+        salary: 100000,
+        perm: true,
+      };
+      //   accessing variable itself and knowing its type,
+      console.log(person);
+      console.log(typeof person);
+      //   accessing keys in 2 ways:
+      //  1- object["key"]
+      //  2- object.key
+      console.log(person["salary"]);
+      console.log("Salary of employee is Rs.", person["salary"], "/-");
+      console.log(person["age"]);
+      console.log(person["perm"]);
+      console.log(person.age);
+      console.log(person.firstName);
+      console.log(person.perm);
+
+      //   Assignment # 01:
+      let keyboard = {
+        name: "keyboard",
+        rating: 4.5,
+        salePastMonth: 1000,
+        color: "white",
+        keyNumbers: 104,
+        price: 27.34,
+        isReturned: true,
+        specificFor: "PC/Laptop",
+      };
+
+      /*
+       * Arrays - they are special type of object;used for storing ordered collection of data in various datatypes; multiple datatypes can be combined in an array.
+       Combination of different datatypes in indexed order. 
+       */
+
+      /*
+       * Functions - are the block of code designed to perform specific tasks and can be stored in variables.
+       */
+    </script>
+  </body>
+</html>

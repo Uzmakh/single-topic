@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Conversion</title>
+</head>
+
+<body>
+    <h1>Learn with Tashan</h1>
+    <h3>DataType Conversion Examples and String Methods and Properties</h3>
+ <script>
+    // Learn with Tushan
+    //Number(),String(),Boolean(),parseInt(),parseFloat();
+
+        // converting string to number
+        let string = "23";
+        let num = Number(string);
+        console.log(typeof num);
+
+        // converting number to string
+        let number = 12;
+        let newString = String(number);
+        console.log(typeof newString);
+
+        // converting string to boolean
+        let string1 = "";
+        let boolean = Boolean(string);
+        console.log(typeof boolean);
+
+         // converting string to number
+        //  another method
+        // Using parseInt()
+        let string2 = "23";
+        let newInteger = (parseInt(string2));
+        console.log(newInteger);
+        console.log(typeof newInteger);
+
+    // string to float
+    let newFloat = "45.66";
+    let newConvertFloat = (parseFloat(newFloat));
+    console.log(newConvertFloat);
+    console.log(typeof newConvertFloat);
+
+    //In this way,Javascript is a dynamically type language
+//Whereas C++ is a static type language
+// int news=35;
+// char st
+
+
+// Assignment 14
+// Q#4
+let x = 10;
+let y= 10 * "20";
+console.log(y);
+console.log(typeof y);
+
+// Video-7
+// String Properties and Methods
+// Properties are with dot and no parenthesis
+let str = "Imran Khan ";
+console.log(str.length);
+console.log(str.charAt(6));
+console.log(str.charCodeAt(4));
+let des = "is a great leader";
+
+//Methods are with dot and parenthesis
+console.log(str.concat(des));
+// concatenation
+let sentence = "We are with " + str + "who " + des + "." ;
+console.log(sentence);
+// tempelate literal used in ES-6
+let sentence1 = `We are with ${str} who ${des}`;
+console.log(sentence1);
+
+// Some more methods frequently used in projects
+// indexOf() - tells the position of a character in string
+console.log(str.indexOf("a"));
+// lastIndexOf()
+console.log(str.lastIndexOf("a"));
+console.log(str.lastIndexOf("w"));
+// returns -1 if the character not  in the string
+
+// slice() - takes a slice of consecutive characters in a string
+console.log(str.slice(4, 9))
+// replace()
+console.log(str.replace("Imran", "Tushan"));
+// substring()-(works as slice method)
+console.log(str.substring(4,9));
+// toUpperCase()
+console.log(str.toUpperCase());
+// toLowerCase()
+console.log(str.toLowerCase());
+// trim()
+console.log(str.trim());
+// includes()
+console.log(str.includes("r"));
+// endsWith()
+console.log(str.endsWith(""));
+
+// Use of string methods
+let str1 = "mystring";
+// document.write(str1.startsWith("m"));
+// JavaScript Task.
+// take the variable mystring and capitalize the first letter of word using the some of methods we have learned .
+// put the result in variable.
+let str2 = str1.replace("m","M");
+str2 = document.write(str2);
+    </script>
+</body>
+
+</html>

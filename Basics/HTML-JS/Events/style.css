@@ -1,0 +1,54 @@
+/* div{
+    width: 300px;
+    height: 50px;
+    background: orange;
+    margin-block: 12px;
+}
+button{
+    width: 80px;
+    
+} */
+
+/* styling for Assignment-CLASS-48 */
+.container {
+  width: 300px;
+  padding: 20px;
+  background: #c8b38c;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#ageConverter {
+  width: 300px;
+  height: 50px;
+  background: orange;
+  color:white;
+  margin-block: 12px;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 10px;
+  visibility: hidden;
+}
+input {
+  height: 20px;
+}
+/* To remove arrows from input-type-number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+button {
+  width: 80px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+#reset{
+  visibility: hidden;
+}

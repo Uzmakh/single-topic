@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch Statement</title>
+  </head>
+  <body>
+    <h2>CLASS-13</h2>
+    <h1>Switch Case Statements</h1>
+    <script>
+      let num1 = 10;
+      let num2 = 23;
+      let result = 0;
+      let operator = prompt("Enter operator:");
+      console.log(operator);
+
+      switch (operator) {
+        case "+":
+          result = num1 + num2;
+          break;
+        case "-":
+          result = num1 - num2;
+          break;
+        case "*":
+          result = num1 * num2;
+          break;
+        case "/":
+          result = num1 / num2;
+          break;
+        default:
+          alert("Invalid input!");
+          document.write("Invalid Input!");
+      }
+      if (result != 0) {
+        console.log(num1, operator, num2, "=", result);
+      }
+
+      // Another example
+      let color = "Red";
+
+      switch (color) {
+        case "red":
+          console.log("Stop");
+          break;
+        case "green":
+          console.log("Slow down");
+          break;
+        case "yellow":
+          console.log("Go");
+          break;
+
+        default:
+          console.log("Light is broken");
+      }
+    </script>
+  </body>
+</html>

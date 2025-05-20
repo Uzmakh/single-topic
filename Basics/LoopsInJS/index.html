@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops In JS</title>
+  </head>
+  <body>
+    <h2>CLASS-14</h2>
+    <h1>LOOPS IN JS</h1>
+    <h2>CLASS-15</h2>
+    <h1>While-LOOPS IN JS</h1>
+    <h2>CLASS-16</h2>
+    <h1>Do-While LOOPS IN JS</h1>
+    <h2>CLASS-17</h2>
+    <h1>For-Of & For-In LOOPS IN JS</h1>
+    <h2>CLASS-18</h2>
+    <h1>Practice Assignments</h1>
+    <script>
+      /**
+       * Loops allow us to run the code-to execute a block of code repeatedly, until a certain condition is met.
+       * there are 3 ways of Loops in Js;
+       * 1-for-loop
+       * 2-while-loop
+       * 3- do-while loop
+       */
+
+      //  CLASS-15
+      //  for-loop
+      // Assignment # 01
+      // Write a JS program(for-loop) to display numbers from 1 to 5
+      // and get the sum of all numbers from 1 to 5 and display the result as the sum of values.
+      // let i;
+      // let sum = 0;
+
+      // for (let i = 1; i <= 5; i++) {
+      //   console.log(i);
+      //   sum = sum + i;
+      // }
+      // console.log("==================");
+      // console.log("Sum of values:", sum);
+      // console.log("Value of i :", i);
+
+      // Assignment # 02
+      //  Take a number-input from user anddisplay its table upto 10.
+      // let numberInput = prompt("Enter a number.");
+      // let i;
+      // let result;
+
+      // for (i = 1; i <= 10; i++) {
+      //   result = numberInput * i;
+      //   console.log(numberInput, " * ", i, "=", result);
+      //   console.log(numberInput + " * " + i + "=" + result);
+      //   // console.log(`${numberInput}*${i} = ${numberInput * i}`);
+      // }
+
+      //  CLASS-16
+      //  while-loop
+      // Print even numbers
+      // let i = 2;
+      // while (i <= 20) {
+      //   console.log((i += 2));
+      // }
+
+      // do-while-loop
+      // let i = 0;
+      // do {
+      //   console.log(i);
+      //   i++;
+      // } while (i <= 5);
+      // console.log("End of program");
+
+      // ASSIGNMENT:
+      // Print a series of 3,6,9,12,15 upto 99
+      // iteration by 3
+      // for-loop
+      // for (let i = 3; i <= 99; i += 3) {
+      //   console.log(i);
+      // }
+
+      // while-loop
+      // let i = 3;
+      // while (i <= 99) {
+      //   console.log(i);
+      //   i += 3;
+      // }
+
+      // do-while
+      // let i = 3;
+      // do {
+      //   console.log(i);
+      //   i += 3;
+      // } while (i <= 99);
+      //   CLASS-17
+      /**================================
+       * Two more special types of Loops
+       * ================================
+       */
+      // for-of   //string/array
+      // for-in    //object
+
+      // for-of
+      // let empName = "Usama Aamir";
+      // let empName = prompt("Enter a string:");
+      // let strSize = 0;
+      // for (let x of empName) {
+      //   console.log(x);
+      //   strSize++;
+      // }
+      // console.log(strSize);
+
+      // for-in
+      // let employee = {
+      //   fullName: "Ali Imran",
+      //   age: 34,
+      //   salary: 45000,
+      //   isPerm: true,
+      // };
+      // for (let x in employee) {
+      //   // console.log(x); //gives keys
+      //   console.log(x, ":", employee[x]); //gives keys-value
+      // }
+
+      /**=================
+       * PRACTICE WORK
+       * =================*/
+      // Assignment-01
+      // Print a series of numbers 1 to 100 using for-loop
+      // for (let i = 1; i <= 100; i++) {
+      //   console.log(i);
+      // }
+      // changing it to only even numbers
+      // for (let i = 1; i <= 100; i++) {
+      //   if (i % 2 === 0) {
+      //     console.log(i);
+      //   }
+      // }
+      // changing it to only odd numbers
+      // for (let i = 1; i <= 100; i++) {
+      //   if (i % 2 !== 0) {
+      //     console.log(i);
+      //   }
+      // }
+      // Print a series of numbers 1 to 100 using while-loop
+      // let i = 1;
+      // while (i <= 100) {
+      //   console.log(i);
+      //   i++;
+      // }
+      // changing it to only even numbers
+      // let i = 2;
+      // while (i <= 100) {
+      //   if (i % 2 === 0) {
+      //     console.log(i);
+      //   }
+      //   i++;
+      // }
+      // changing it to only odd numbers
+      // let i = 2;
+      // while (i <= 100) {
+      //   if (i % 2 !== 0) {
+      //     console.log(i);
+      //   }
+      //   i++;
+      // }
+      // Print a series of numbers 1 to 100 using do-while-loop
+      // let i = 1;
+      // do {
+      //   console.log(i);
+      //   i++;
+      // } while (i <= 100);
+      // changing it to only even numbers
+      // let i = 1;
+      // do {
+      //   if (i % 2 === 0) {
+      //     console.log(i);
+      //   }
+
+      //   i++;
+      // } while (i <= 100);
+      // changing it to only odd numbers
+      // let i = 1;
+      // do {
+      //   if (i % 2 !== 0) {
+      //     console.log(i);
+      //   }
+
+      //   i++;
+      // } while (i <= 100);
+
+      // Assignment-02
+      let pakYear = 1947;
+      let year = 0;
+
+      while (year != pakYear) {
+        let year = prompt("In which year, Pakistan came into being?");
+        if (year == pakYear) {
+          alert("Correct Answer.");
+          break;
+        } else if (year > pakYear) {
+          alert("Large number, Try again");
+        } else if (year < pakYear) {
+          alert("Smaller number, Try again");
+        }
+      }
+      alert(" Thanks for using this program!");
+    </script>
+  </body>
+</html>

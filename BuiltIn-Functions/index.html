@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuiltIn Js Functions</title>
+  </head>
+  <body>
+    <h1>BuiltIn Js Functions</h1>
+    <ul>
+      <li>-alert("stringVariable/sentence"); //ok</li>
+      <li>-console.log("stringVariable/sentence"); //used for debugging</li>
+      <li>-document.write(); //to write on page</li>
+      <li>-prompt("msg","default"); //to get user-input</li>
+      <li>-confirm(); //ok-cancel to deny</li>
+    </ul>
+
+    <!-- document.getElementsByClassName -->
+    <div class="main">Welcome to Js Course!</div>
+    <div class="main">Js Course!</div>
+
+    <!-- Using prompt to get user data -->
+    <p>Name:</p>
+    <span id="name"></span>
+    <br />
+    <button onclick="call()">Call</button>
+  </body>
+  <script>
+    // const myPage = document.getElementById("main").innerHTML;
+
+    // document.getElementById("main").innerHTML =
+    //   "<h2>Welcome to Js Course!</h2>";
+    // const myPage = document.getElementsByClassName("main")[0].innerHTML;
+    // console.log(myPage);
+    // alert(myPage);
+
+    // document.getElementsByClassName("main")[0].innerHTML = "Js Course!";
+    // document.getElementsByClassName("main")[1].innerHTML =
+    //   " Welcome to Js Course!";
+
+    const array = [1, 2, 3, 4, 5, 6];
+    console.log(array.length);
+
+    console.log("Hello".toUpperCase());
+  </script>
+  <script src="script.js"></script>
+</html>

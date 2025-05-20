@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Example</title>
+    <style>
+      .red-square {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+      }
+      .hidden {
+        display: none;
+      }
+      .color-box {
+        background-color: limegreen;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+      }
+      /* .button-container {
+        margin: 20px;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="red-square"></div>
+
+    <!-- querySelectorAll -->
+    <ul>
+      <li class="js-target">Unchanged</li>
+      <li class="js-target">Unchanged</li>
+      <li>Won't Change</li>
+      <li class="js-target">Unchanged</li>
+      <li>Won't Change</li>
+      <li class="js-target">Unchanged</li>
+    </ul>
+    <button class="event-button">Click me!</button>
+
+    <!-- change- Events -->
+    <div class="container">
+      <div class="color-box"></div>
+      <input class="color-input" placeholder="Type a color here!" />
+    </div>
+
+    <!-- Event-Delegation -->
+    <div class="button-container">
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+      <button>5</button>
+    </div>
+    <script>
+      const square = document.querySelector(".red-square");
+      square.style.backgroundColor = "limegreen";
+      //   use of querySelector
+      // use of querySelectorAll- nodelist involves here so we use loop-method to target each element in the list - (node is the individual element on the document-page)
+      const elementsToChange = document.querySelectorAll(".js-target");
+      for (let i = 0; i < elementsToChange.length; i++) {
+        const currentElement = elementsToChange[i];
+        elementsToChange[i].innerText = "Modified by Javascript!";
+        currentElement.style.border = "2px solid grey";
+      }
+      // use of classList for adding/removing classes
+      //   const y = $0;
+      //   y.classList.add("other-class");
+      //   y.classList.remove("other-class");
+
+      //   y = document.querySelector(".red-square");
+      //   y.classList.add("hidden");
+      //   y.classList.remove("hidden");
+
+      //   document.body.classList;
+
+      //   Events and Listeners
+      const button = document.querySelector(".event-button");
+      button.addEventListener("click", function () {
+        alert("Hey there!");
+      });
+      // Event-Delegation
+      const btnContainer = document.querySelector(".button-container");
+      // giving margin to the btnContainer through Js
+      btnContainer.style.margin = "20px";
+
+      btnContainer.addEventListener("click", function (e) {
+        if (e.target.tagName === "BUTTON") {
+          alert(`You clicked on button ${e.target.innerText}`);
+          event.currentTarget.style.backgroundColor = "Peru";
+        }
+      });
+      // Color-change event
+      const input = document.querySelector(".color-input");
+      const paragraph = document.querySelector(".color-box");
+
+      input.addEventListener("change", function () {
+        paragraph.style.backgroundColor = input.value;
+      });
+    </script>
+  </body>
+</html>
