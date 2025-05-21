@@ -41,16 +41,35 @@ const checkWinner = () => {
         if (pos1Val != "" && pos2Val != "" && pos3Val != "")  {
             if (pos1Val === pos2Val && pos2Val=== pos3Val) {
                 // console.log("Hoorray ");
-                showWinner();
+                showWinner(pos1Val);
+                return true;
             }
         }
     }
 }
-const showWinner = ()=>{
-    msg.innerText = ("You have won the game!");
-    msgContainer.classList.remove("hide");
+const showWinner = (winner) => {
+    // Add slight delay to show the message
+    setTimeout(() => {
+        msg.innerText = `🎉 Player ${winner} Wins! 🎉`;
+        msgContainer.classList.remove("hide");
+
+        // Confetti burst
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
+
+        // Additional confetti bursts for celebration effect
+        setTimeout(() => confetti({ spread: 50, startVelocity: 35 }), 100);
+        setTimeout(() => confetti({ spread: 70, origin: { x: 0.3 } }), 200);
+        setTimeout(() => confetti({ spread: 70, origin: { x: 0.7 } }), 300);
+
+    }, 1000); // 1 second delay
     disableBoxes();
-}
+};
+  
+
 const disableBoxes = () => {
     for (let box of boxes) {
         box.disabled = true;
@@ -66,6 +85,9 @@ const resetGame = () => {
     turnO = true;
     enableBoxes();
     msgContainer.classList.add("hide");
+
+    // Clear any pending timeouts
+    clearTimeout(winTimeout);
 }
 
 resetBtn.addEventListener("click", resetGame);
