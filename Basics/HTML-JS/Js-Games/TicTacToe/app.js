@@ -18,9 +18,11 @@ boxes.forEach((box) => {
         
         if (turnO) {
             box.innerText = "O";
+            box.classList.add("o-style")
             turnO = false;
         } else {
             box.innerText = "X";
+            box.classList.add("x-style")
             turnO = true;
         }
         box.disabled = true;

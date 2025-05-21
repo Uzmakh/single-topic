@@ -60,8 +60,19 @@ h1 {
     border-radius: 1rem;
     border: none;
     font-size: 8vmin;
-    color: #df714c;
+
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Add these styles to your CSS */
+.x-style {
+    color: #df714c;
+
+}
+
+.o-style {
+    color: #1cd4ac;
+
 }
 
 #reset-btn,
