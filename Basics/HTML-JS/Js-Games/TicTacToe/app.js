@@ -12,6 +12,11 @@ let turnO = true;
 const winPatterns = [[0, 1, 2],
     [0, 3, 6], [0, 4, 8], [1, 4, 7], [2, 5, 8], [2, 4, 6,], [3, 4, 5], [6, 7, 8]];
 
+// Add this function to check for draw
+const checkDraw = () => {
+    return Array.from(boxes).every(box => box.innerText !== "");
+};
+
 boxes.forEach((box) => {
     box.addEventListener("click", () => {
         console.log("Button is clicked!");
@@ -27,8 +32,25 @@ boxes.forEach((box) => {
         }
         box.disabled = true;
         checkWinner();
-        })
-})
+
+        if (!checkWinner()) { // Only check draw if no winner
+            if (checkDraw()) {
+                setTimeout(() => {
+                    msg.innerText = "Game Draw! 🤝";
+                    msgContainer.classList.remove("hide");
+
+                    // Optional: Gray confetti for draws
+                    confetti({
+                        particleCount: 200,
+                        spread: 100,
+                        origin: { y: 0.6 },
+                        colors: ['#95a5a6', '#7f8c8d']
+                    });
+                }, 1000);
+            }
+        }
+    });
+});
     
 const checkWinner = () => {
     for (let pattern of winPatterns) {
@@ -90,6 +112,8 @@ const resetGame = () => {
 
     // Clear any pending timeouts
     clearTimeout(winTimeout);
+    // Clear draw message
+    msg.innerText = "";
 }
 
 resetBtn.addEventListener("click", resetGame);
