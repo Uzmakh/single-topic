@@ -1,11 +1,11 @@
-// BuiltIn-Functions
-// -alert("stringVariable/sentence");     //ok
+//? BuiltIn-Functions
+ alert("stringVariable/sentence");     //ok
 // alert("Something is wrong");
-// -console.log("stringVariable/sentence");   //used for debugging
+ console.log("stringVariable/sentence");   //used for debugging
 // console.error("stringVariable/sentence: This is an error message.");   //used for debugging
-// -document.write();
-// -prompt("msg","default");    //to get user-input
-// -confirm();   //ok-cancel to deny
+document.write("Something to write");
+prompt("msg", "default");    //to get user-input
+  confirm("Do you want to delete it?");   //ok-cancel to deny
 // prompt("Write your name.", "Uzma Khan");
 // let roll = prompt("Enter your roll no : ");
 // console.log(roll);

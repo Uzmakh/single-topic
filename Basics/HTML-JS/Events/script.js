@@ -41,24 +41,24 @@
 // };
 
 // CLASS-48
-let calcBtn = document.querySelector("#calculate");
-let textBox = document.querySelector("#ageConverter");
-let age = document.querySelector("input");
-let resetBtn = document.querySelector("#reset");
+// let calcBtn = document.querySelector("#calculate");
+// let textBox = document.querySelector("#ageConverter");
+// let age = document.querySelector("input");
+// let resetBtn = document.querySelector("#reset");
 
-calcBtn.onclick = () => {
-    textBox.style.visibility = "visible";
-    resetBtn.style.visibility = "visible";
-    let months = age.value * 12;
-    textBox.innerText = `Age in Months : is ${months}`;
-};
+// calcBtn.onclick = () => {
+//     textBox.style.visibility = "visible";
+//     resetBtn.style.visibility = "visible";
+//     let months = age.value * 12;
+//     textBox.innerText = `Age in Months : is ${months}`;
+// };
 
-resetBtn.onclick = () => {
-    textBox.innerText = "";
-    age.value = "1";
-    resetBtn.style.visibility = "hidden";
-    textBox.style.visibility = "hidden";
-}
+// resetBtn.onclick = () => {
+//     textBox.innerText = "";
+//     age.value = "1";
+//     resetBtn.style.visibility = "hidden";
+//     textBox.style.visibility = "hidden";
+// }
 
 // CLASS-49
 // Event Object created by browser , that tells the event-details
@@ -92,4 +92,17 @@ resetBtn.onclick = () => {
 // }
 // button.addEventListener("click", func);
 // button.removeEventListener("click", func);
+
+
+// * Show Password
+const button = document.querySelector(".btn");
+const pass= document.querySelector("input");
+
+button.addEventListener("click", () => {
+    if (pass.type === "password") {
+        pass.type = "text";
+    } else {
+        pass.type === "password"
+    }
+})
 

@@ -62,7 +62,7 @@
 //? same as in tempelate literals folder
 
 //! CLASS-22
-// String Methods-PART-1
+//? String Methods-PART-1
 // str.toLowerCase();
 // str.toUpperCase();
 // str.trim();
@@ -254,8 +254,19 @@ console.log(message2);
 // console.log(newMsg);
 
 
+// ? Reverse a string
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
 
-
+// Example usage:
+let originalString = "Hello, World!";
+let reversedString = reverseString(originalString);
+console.log("Original string: " + originalString);
+console.log("Reversed string: " + reversedString);
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
 
 
 

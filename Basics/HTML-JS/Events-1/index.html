@@ -13,7 +13,7 @@
     <button id="light">Light</button> -->
 
     <!-- with single button -->
-    <!-- <button>DARK</button> -->
+    <button>DARK</button>
 
     <!-- Assignment#02 Interchanging smileys -->
     <img src="sad.png" alt="sad smiley" id="image" width="10%" />
@@ -37,22 +37,22 @@
 
       // with a single button
 
-      // let toggleBtn = document.querySelector("button");
-      // let body = document.querySelector("body");
-      // let color = "dark";
+      let toggleBtn = document.querySelector("button");
+      let body = document.querySelector("body");
+      let color = "dark";
 
-      // let changeTheme = () => {
-      //     if (color === "dark") {
-      //         body.style.background = "white";
-      //         color = "light";
-      //         toggleBtn.innerText = "Dark";
-      //     } else {
-      //         body.style.background = "black";
-      //         color = "dark";
-      //         toggleBtn.innerText = "light";
-      //     }
-      // };
-      // toggleBtn.addEventListener("click", changeTheme);
+      let changeTheme = () => {
+        if (color === "dark") {
+          body.style.background = "white";
+          color = "light";
+          toggleBtn.innerText = "Dark";
+        } else {
+          body.style.background = "black";
+          color = "dark";
+          toggleBtn.innerText = "Light";
+        }
+      };
+      toggleBtn.addEventListener("click", changeTheme);
 
       // Assignment#02 Interchanging smileys
       let image = document.querySelector("#image");
