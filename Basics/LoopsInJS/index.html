@@ -110,16 +110,19 @@
       // console.log(strSize);
 
       // for-in
-      // let employee = {
-      //   fullName: "Ali Imran",
-      //   age: 34,
-      //   salary: 45000,
-      //   isPerm: true,
-      // };
-      // for (let x in employee) {
-      //   // console.log(x); //gives keys
-      //   console.log(x, ":", employee[x]); //gives keys-value
-      // }
+      let employee = {
+        fullName: "Ali Imran",
+        age: 34,
+        salary: 45000,
+        isPerm: true,
+      };
+      for (let x in employee) {
+        // console.log(x); //gives keys
+        console.log(x, ":", employee[x]); //gives keys-value
+        // console.log(x, ":", employee.x); //gives undefined
+        // console.log(`${x}:${employee[x]}`); //gives key-value
+        // console.log(`${x}:${employee.x}`); //gives undefined
+      }
 
       /**=================
        * PRACTICE WORK
@@ -189,21 +192,21 @@
       // } while (i <= 100);
 
       // Assignment-02
-      let pakYear = 1947;
-      let year = 0;
+      // let pakYear = 1947;
+      // let year = 0;
 
-      while (year != pakYear) {
-        let year = prompt("In which year, Pakistan came into being?");
-        if (year == pakYear) {
-          alert("Correct Answer.");
-          break;
-        } else if (year > pakYear) {
-          alert("Large number, Try again");
-        } else if (year < pakYear) {
-          alert("Smaller number, Try again");
-        }
-      }
-      alert(" Thanks for using this program!");
+      // while (year != pakYear) {
+      //   let year = prompt("In which year, Pakistan came into being?");
+      //   if (year == pakYear) {
+      //     alert("Correct Answer.");
+      //     break;
+      //   } else if (year > pakYear) {
+      //     alert("Large number, Try again");
+      //   } else if (year < pakYear) {
+      //     alert("Smaller number, Try again");
+      //   }
+      // }
+      // alert(" Thanks for using this program!");
     </script>
   </body>
 </html>
